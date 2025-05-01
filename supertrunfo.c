@@ -21,7 +21,9 @@ int main (){
     float pibPerCapita2;
 
     printf("SUPER TRUNFO, DEV: ALVARO TORRES\n ");
+    printf("\n");
     printf("**************************CADASTRO DE CARTAS*****************************\n");
+    printf("\n");
 
 //Entradada de dados:
 
