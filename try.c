@@ -103,8 +103,8 @@ int main (){
      printf("3: tamanho do PIB\n");
      printf("4: Quantidade de pontos Turísticos\n");
      printf("5. Densidade Demográfica\n");
-     int resultado_carta1;
      scanf("%d", &menu1);
+     int resultado_carta1;
 
 
     /* 
@@ -117,7 +117,7 @@ int main (){
         {
         case 1:        
             if(populacao == populacao2) {
-                int resultado_carta1 = 0;
+                 resultado_carta1 = 0;
             } else if (populacao > populacao2)
             {
                 resultado_carta1 = 1;
@@ -130,8 +130,8 @@ int main (){
             
         case 2:
             if(area == area2) {
-                int resultado_carta1 = 0;
-            } else if (area == area2)
+                 resultado_carta1 = 0;
+            } else if (area > area2)
             {
                 resultado_carta1 = 1;
             } else if (populacao < populacao2) {
@@ -143,11 +143,11 @@ int main (){
             
             
         case 3: 
-            if(pib > pib2) {
-                int resultado_carta1 = 1;
-            } else if (pib == pib2)
+            if(pib == pib2) {
+                 resultado_carta1 = 0;
+            } else if (pib > pib2)
             {
-                resultado_carta1 = 0;
+                resultado_carta1 = 1;
             } else if (pib < pib2) {
                 resultado_carta1 = 2;
             } else {
@@ -156,11 +156,11 @@ int main (){
             break;
 
         case 4: 
-            if(pontosTuristicos > pontosTuristicos2) {
-                int resultado = 1;
-            } else if (pontosTuristicos == pontosTuristicos2)
-            {
+            if(pontosTuristicos == pontosTuristicos2) {
                 resultado_carta1 = 0;
+            } else if (pontosTuristicos > pontosTuristicos2)
+            {
+                resultado_carta1 = 1;
             } else if (pontosTuristicos < pontosTuristicos2) {
                 resultado_carta1 = 2;
             } else {
@@ -169,11 +169,11 @@ int main (){
             break;
         
         case 5: 
-            if(densidadePopulacional < densidadePopulacional2) {
-                int resultado_carta1 = 1;
-            } else if (densidadePopulacional == densidadePopulacional2)
-            {
+            if(densidadePopulacional == densidadePopulacional2) {
                 resultado_carta1 = 0;
+            } else if (densidadePopulacional < densidadePopulacional2)
+            {
+                resultado_carta1 = 1;
             } else if (densidadePopulacional > densidadePopulacional2) {
                 resultado_carta1 = 2;
             } else {
@@ -217,8 +217,8 @@ int main (){
 
     case 2:
     if(area == area2) {
-        int resultado_carta2 = 0;
-    } else if (area == area2)
+        resultado_carta2 = 0;
+    } else if (area > area2)
     {
         resultado_carta2 = 1;
     } else if (populacao < populacao2) {
@@ -229,11 +229,11 @@ int main (){
     break;
         
     case 3:
-    if(pib > pib2) {
-        int resultado_carta2 = 1;
-    } else if (pib == pib2)
-    {
+    if(pib == pib2) {
         resultado_carta2 = 0;
+    } else if (pib > pib2)
+    {
+        resultado_carta2 = 1;
     } else if (pib < pib2) {
         resultado_carta2 = 2;
     } else {
@@ -242,11 +242,11 @@ int main (){
     break;
 
     case 4: 
-    if(pontosTuristicos > pontosTuristicos2) {
-        int resultado_carta2 = 1;
-    } else if (pontosTuristicos == pontosTuristicos2)
+    if(pontosTuristicos == pontosTuristicos2) {
+         resultado_carta2 = 0;
+    } else if (pontosTuristicos > pontosTuristicos2)
     {
-        resultado_carta2 = 0;
+        resultado_carta2 = 1;
     } else if (pontosTuristicos < pontosTuristicos2) {
         resultado_carta2 = 2;
     } else {
@@ -255,11 +255,11 @@ int main (){
     break;
 
     case 5:
-    if(densidadePopulacional < densidadePopulacional2) {
-        int resultado_carta2 = 1;
-    } else if (densidadePopulacional == densidadePopulacional2)
-    {
+    if(densidadePopulacional == densidadePopulacional2) {
         resultado_carta2 = 0;
+    } else if (densidadePopulacional < densidadePopulacional2)
+    {
+        resultado_carta2 = 1;
     } else if (densidadePopulacional > densidadePopulacional2) {
         resultado_carta2 = 2;
     } else {
@@ -271,41 +271,48 @@ int main (){
         printf("Opção inválida!");
         break;
     }
+    printf("\n");
 
     printf("--------------- Resultado da primeira rodada ----------------- \n");
+    printf("\n");
 
-    if (resultado_carta1 = 1) {
-        printf("O vencedor da primeira rodada foi a vitória da carta 1, parabéns!\n");
-    } else if (resultado_carta1 == 0)  {
-        printf("O resultado da primeira rodada é um empate\n");
+    if (resultado_carta1 == 0) {
+        printf("As cartas empataram a rodada!!\n");
+    } else if (resultado_carta1 == 1)  {
+        printf("A primeira carta venceu a rodada!\n");
     } else if (resultado_carta1 == 2) {
-        printf("O resultado da primeira rodada foi a vitória da carta 2, parabéns!\n");
+        printf("A segunda carta venceu a rodada!\n");
     }
+    printf("\n");
     
     
     
     printf("--------------- Resultado da segunda rodada ----------------- \n");
+    printf("\n");
 
-    if (resultado_carta2 = 1) {
-        printf("O vencedor da primeira rodada foi a vitória da carta 1, parabéns!\n");
-    } else if (resultado_carta2 == 0)  {
-        printf("O resultado da primeira rodada é um empate\n");
+    if (resultado_carta2 == 0) {
+        printf("As cartas empataram a rodada!\n");
+    } else if (resultado_carta2 == 1)  {
+        printf("A primeira carta venceu a rodada\n");
     } else if (resultado_carta2 == 2) {
-        printf("O resultado da primeira rodada foi a vitória da carta 2, parabéns!\n");
+        printf("A segunda carta venceu a rodada!\n");
     }
+    printf("\n");
+
     printf ("### Resultado da partida ###\n");
 
-    if (resultado_carta1 && resultado_carta2 == 1)
+    if (resultado_carta1 && resultado_carta2 == 0)
     {
-        printf("Parabéns ao primeiro jogador, ele ganhou os dois rounds!\n");
-    } else if (resultado_carta1 != resultado_carta2) {
-        printf("O jogo está empatado!\n");
-    } else ("Parabéns ao segundo jogador, ele ganhou os dois rounds!\n");
+        printf("As cartas empataram nos dois atributos, o jogo empatou!\n");
+    } else if (resultado_carta1 && resultado_carta2 == 1) {
+        printf("A primeira carta venceu a partida!\n");
+    } else if (resultado_carta1 && resultado_carta2 == 2) {
+        printf("A carta 2 venceu a partida!\n");
+    } else {
+        printf("verificar erro!\n");
+    }
     
-    
-    
-    
-            
+
     
      return 0;
 
