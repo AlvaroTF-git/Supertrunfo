@@ -163,8 +163,5 @@ int main (){
                 printf("### Opção inválida ###");
             break;
         }
-            
-    
      return 0;
-
 }
